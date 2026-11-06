@@ -1,0 +1,80 @@
+{
+  "author": "Roberto Valentini",
+  "license": "GPL-3.0",
+  "name": "valantin-zabbix",
+  "version": "0.0.1",
+  "summary": " A openvox module for zabbix",
+  "source": "https://github.com/valantin/valantin-zabbix",
+  "dependencies": [
+    {
+      "name": "puppetlabs-stdlib",
+      "version_requirement": ">= 4.25.0 < 11.0.0"
+    }
+  ],
+  "requirements": [
+    {
+      "name": "openvox",
+      "version_requirement": ">= 8.19.0 < 10.0.0"
+    }
+  ],
+  "operatingsystem_support": [
+    {
+      "operatingsystem": "AlmaLinux",
+      "operatingsystemrelease": [
+        "8",
+        "9"
+      ]
+    },
+    {
+      "operatingsystem": "Archlinux"
+    },
+    {
+      "operatingsystem": "CentOS",
+      "operatingsystemrelease": [
+        "9"
+      ]
+    },
+    {
+      "operatingsystem": "Debian",
+      "operatingsystemrelease": [
+        "11",
+        "12",
+        "13"
+      ]
+    },
+    {
+      "operatingsystem": "Fedora",
+      "operatingsystemrelease": [
+        "41"
+      ]
+    },
+    {
+      "operatingsystem": "OracleLinux",
+      "operatingsystemrelease": [
+        "8",
+        "9"
+      ]
+    },
+    {
+      "operatingsystem": "RedHat",
+      "operatingsystemrelease": [
+        "8",
+        "9"
+      ]
+    },
+    {
+      "operatingsystem": "Rocky",
+      "operatingsystemrelease": [
+        "8",
+        "9"
+      ]
+    },
+    {
+      "operatingsystem": "Ubuntu",
+      "operatingsystemrelease": [
+        "24.04",
+        "26.04"
+      ]
+    }
+  ]
+}
