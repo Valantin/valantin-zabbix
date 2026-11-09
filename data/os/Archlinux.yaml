@@ -1,0 +1,2 @@
+zabbix::manage_repo: false
+zabbix::repo::manage_repo: "%{alias('zabbix::manage_repo')}"

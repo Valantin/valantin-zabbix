@@ -62,6 +62,11 @@ Add or update tests for every behavior change or bug fix. Refactoring and
 documentation-only changes may reuse existing coverage when behavior is
 unchanged.
 
+- Structure class specs around `on_supported_os.each` so CI exercises behavior
+  using the facts of every declared supported operating system. Use targeted
+  fact hashes only for behavior that cannot be represented by supported OS
+  fixtures.
+
 Run the relevant focused tests while developing, then run:
 
 ```shell
