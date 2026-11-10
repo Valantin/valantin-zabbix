@@ -2,3 +2,23 @@
 zabbix::version: '8.0'
 
 zabbix::repo::version: "%{alias('zabbix::version')}"
+
+zabbix::agent::variant: agent2
+zabbix::agent::variants:
+  agent:
+    package_name: zabbix-agent
+    service_name: zabbix-agent
+    config_file: /etc/zabbix/zabbix_agentd.conf
+    binary_path: /usr/sbin/zabbix_agentd
+    settings:
+      LogType: system
+      PidFile: /run/zabbix/zabbix_agentd.pid
+      Server: '127.0.0.1'
+  agent2:
+    package_name: zabbix-agent2
+    service_name: zabbix-agent2
+    config_file: /etc/zabbix/zabbix_agent2.conf
+    binary_path: /usr/sbin/zabbix_agent2
+    settings:
+      LogType: system
+      Server: '127.0.0.1'

@@ -1,2 +1,14 @@
 zabbix::manage_repo: false
 zabbix::repo::manage_repo: "%{alias('zabbix::manage_repo')}"
+
+zabbix::agent::variant: agent
+zabbix::agent::variants:
+  agent:
+    package_name: zabbix-agent
+    service_name: zabbix-agent
+    config_file: /etc/zabbix_agentd.conf
+    binary_path: /usr/sbin/zabbix_agentd
+    settings:
+      LogType: system
+      PidFile: /run/zabbix/zabbix_agentd.pid
+      Server: '127.0.0.1'
