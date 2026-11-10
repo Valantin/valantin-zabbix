@@ -1,0 +1,7 @@
+<%- | Zabbix::AgentVariant $variant, Zabbix::ConfigSettings $settings, Array[Zabbix::AgentAccessRule] $access_rules, Stdlib::Absolutepath $fragment_dir | -%>
+# Managed by Puppet. Local changes will be overwritten.
+<%= zabbix::agent::render_settings($variant, $settings) -%>
+<% $access_rules.each |$rule| { -%>
+<%= $rule['action'] ? { 'allow' => 'AllowKey', 'deny' => 'DenyKey' } %>=<%= $rule['pattern'] %>
+<% } -%>
+Include=<%= $fragment_dir %>/*.conf
